@@ -1,0 +1,21 @@
+import React from 'react';
+
+const PostList = () => {
+    const posts = [
+        { id: 1, title: 'First Post', content: 'This is the first post.' },
+        { id: 2, title: 'Second Post', content: 'This is the second post.' },
+    ];
+
+    return (
+        <div>
+            {posts.map(post => (
+                <div key={post.id}>
+                    <h2>{post.title}</h2>
+                    <p>{post.content}</p>
+                </div>
+            ))}
+        </div>
+    );
+};
+
+export default PostList;
